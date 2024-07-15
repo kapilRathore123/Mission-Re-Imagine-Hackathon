@@ -1,0 +1,225 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Indian Flavors - Restaurant</title>
+    <meta name="description" content="This is a Restaurant html template made by codewithkapil">
+    <link rel="icon" type="imagr/icon"
+      href="https://us.123rf.com/450wm/seamartini/seamartini2203/seamartini220300123/183416613-indian-cuisine-spice-icon-asian-food-seasonings-and-hot-spices-indian-food-restaurant-vector-symbol.jpg?ver=6">
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  body { padding: 2rem; font-family: "Roboto", sans-serif; }
+  
+  main {
+    display: grid;
+    gap: 1.5rem;
+    font: 0.75rem/1.6 helvetica,sans-serif;
+  
+    & h1 {
+      font-family: 'arial-black';
+      background-color: hsl(38, 61%, 73%);
+      text-transform: uppercase;
+      font-family: "Big Shoulders Text", sans-serif;
+      font-optical-sizing: auto;
+    }
+  }
+  
+  nav {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 0.7rem;
+  
+    & button {
+      border: none;
+      background-color: transparent;
+      font-size: 0.75rem;
+      cursor: pointer;
+      color: rgba(0,0,0,0.7);
+    }
+  }
+
+  nav a {
+    background-color:hsl(38, 61%, 73%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    &:hover{
+        background-color: hsl(38, 58%, 71%);
+    }
+  }
+  
+  .active {
+    font-weight: 900;
+    color: black;
+  }
+  
+  .menu {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 1.5rem;
+  
+    & li {
+      & img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        border-radius: 0.25rem;
+        border-radius: 90%;
+        cursor: pointer; 
+        &:hover{
+          border: 2px solid hsl(38, 61%, 73%);
+          padding: 12px;
+           border-radius: 50%;
+           transition: all 0.5s ease-out; 
+        }
+      }
+      & h2 {
+        color: rgba(0,0,0,0.7);
+        font-size: 0.9rem;
+        margin: 0.25rem 0;
+      }
+  
+      & p {
+        color: rgba(0,0,0,0.35);
+      }
+    }
+  }
+
+::-webkit-scrollbar { width: 5px;}
+::-webkit-scrollbar-track { background-color: transparent; }
+::-webkit-scrollbar-thumb { background-color: hsl(38, 61%, 73%);}
+ 
+</style>
+
+ </head>
+ <body>
+    <main id="main">
+ 
+        <h1><marquee behavior="smooth" direction="">Special Menu OF "The Indian Flavors" - Restaurant </marquee></h1>
+        <nav>
+            <a href="index.html"><button class="btn1"><b> IF YOU WANT GO BACK THAN CLICK !</b></button></a>
+          <button class='active' data-tag='all'>All DISHES </button>
+          <button data-tag='apetizers'>Apetizers</button>
+          <button data-tag='entries'>Entries</button>
+          <button data-tag='desserts'>Desserts</button>
+          <button data-tag='drinks'>Drinks</button>
+        </nav>
+        <ul class='menu'>
+          <li class='item' data-type='desserts'>
+            <img src='https://images.unsplash.com/photo-1588685232180-8bb64cb4837a?q=80&w=2250&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Chocolate Ice Cream</h2>
+            <p>Creamy rich cholcoate ice cream with a sprinkle of nuts and fruits</p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Classic Pilsner <span>20/- only</span></h2>
+            <p>A pale lager with a crisp, refreshing taste that's lightly hopped</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Pesto Pasta <span>20/- only</span></h2>
+            <p>Freshly made Pesto pasta with sliced tomatoes</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1615865417491-9941019fbc00?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Vegetarian Delight <span>20/- only</span></h2>
+            <p>Cooked rice with quinoa salad, pinto beans, and asparagus</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=2278&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>House Salad</h2>
+            <p>Fresh local vegetables pair with homemade sausages</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1569058242252-623df46b5025?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Coconut Rice</h2>
+            <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1600845285511-12d222278dc9?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Pumpkin Soup</h2>
+            <p>Homemade pumpkin soup with pumpkin seeds and blue cheese</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1553881781-4c55163dc5fd?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Tomato Soup</h2>
+            <p>Slow cooked tomato soup with a side of classic Dutch bread</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1490990813269-10586274747f?q=80&w=2511&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Mississipi Gumbo</h2>
+            <p>Southern cajun flavored gumbo with shrimps and a slice of garlic bread</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1644704265419-96ddaf628e71?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Porterhouse Special</h2>
+            <p>Succulent porterhouse steak with a side of mashed potato and brocoli</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://plus.unsplash.com/premium_photo-1695055513584-e79902a77962?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Jamaican Chicken</h2>
+            <p>Exotic Jamaican chicken pair with mango salad, rice and peas</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1614597134736-a8e0616933d5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Classic Pork Chop</h2>
+            <p>Succluently grilled pork chop pair with garlic fries</p>
+          </li>
+          <li class='item' data-type='desserts'>
+            <img src='https://images.unsplash.com/photo-1557799852-67fdf88b1b01?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Rose Pudding</h2>
+            <p>Rose flavor tapioca pudding</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1695712641569-05eee7b37b6d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Spring Rolls</h2>
+            <p>Indonesian style spring roll fill with carrots, celery, and shrimp</p>
+          </li>
+          <li class='item' data-type='desserts'>
+            <img src='https://images.unsplash.com/photo-1567327613485-fbc7bf196198?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Blueberry Cheese Cake</h2>
+            <p>Rich creamy melt in your mouth blueberry cheese cake</p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://images.unsplash.com/photo-1618799805265-4f27cb61ede9?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Lemonade</h2>
+            <p>Freshly squeeze lemonade with dash of honey</p>
+          </li>
+          <li class='item' data-type='desserts'>
+            <img src='https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=2278&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Strawberry Banana Crepe</h2>
+            <p>Classic souther strawberry banana crepe</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1560684352-8497838a2229?q=80&w=2256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Clam Chowder</h2>
+            <p>Classic New England cleam chowder</p>
+          </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Grilled Salmon</h2>
+            <p>Freshly grilled salmon with side of beets salad, caramel carrots, and garlic sauce</p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://images.unsplash.com/photo-1504630083234-14187a9df0f5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Expresso</h2>
+            <p>Classic freshly grounded Italian expresso</p>
+          </li>
+        </ul>
+      </main>
+
+      <script src="try.js"></script>
+ </body>
+ </html>
