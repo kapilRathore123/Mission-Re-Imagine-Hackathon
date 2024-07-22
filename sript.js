@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 /* PRELOAD loading will be end after document is loaded */
 
 const preloader = document.querySelector("[data-preaload]");
@@ -152,7 +152,7 @@ gsap.from("#anim",{
   y:-200,
   opacity:0.2,
   duration:2,
-  stagger:.5,
+  stagger:2,
   ease: "bounce.out",
   
 })
@@ -173,6 +173,23 @@ gsap.from(".section menu .grid-list",{
     scroller:"body"
   }
 })
+
+// onscroll text animation
+gsap.to(".c1 h1", {
+  duration: 2,
+  animation: Expo.easeIn,
+  transform: "translateX(-60%)",
+  // scroll trigger code
+  scrollTrigger: {
+    trigger: ".c1",
+    // scroller:"body",
+    // markers: true,
+    start: "top 0%",
+    end: "top -150%",
+    scrub: 2,
+    pin: true
+  }
+});
 
 gsap.from(".section .section-subtitle",{
   x:-1000,
@@ -218,6 +235,7 @@ gsap.from(".service-card",{
     scrollTrigger:{
       trigger:".container .feature-card",
       scroller:"body",
+      
     }
 })
 
@@ -235,7 +253,7 @@ gsap.from(".container #para",{
 
 gsap.from("#section-event .card-title",{
   y:130,
-  duration:2,
+  duration:1.5,
   Delay:1,
   opacity:0,
   stagger:.3,
@@ -280,4 +298,41 @@ Shery.imageEffect(".special-dish-banner img", {
 });
 
 
+var tl = gsap.timeline({scrollTrigger:{
+  trigger:"#thanksdiv",
+  start:"50% 50%",
+  end:"150% 50%",
+  scrub:2,
+  pin:true
+}});
+tl
+.to("#center",{
+ height: "100vh",
+},'a')
+.to("#top_div",{
+  top: "-50%",
+  
+},'a')
+.to("#bottom",{
+  bottom: "-50%",
+},'a')
+.to("#top-h1",{
+  top: "60%"
+},'a')
+.to("#bottom-h1",{
+  bottom: "-30%"
+},'a')
+.to("#center-h1",{
+ top: "-30%"
+},'a')
+.to(".content",{
+ delay: -0.2,
+ marginTop: "0%"
+})
 
+gsap.from("#top-h1",{
+  y:50,
+  duration:1.50,
+  delay:1,
+  opacity:0
+})
