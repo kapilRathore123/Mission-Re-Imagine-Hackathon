@@ -374,6 +374,7 @@ body.nav-active { overflow: hidden; }
 .btn-secondary {
   background-color: var(--gold-crayola);
   color: var(--black);
+  border-radius: 10px;
 }
 
 .btn-secondary::before { background-color: var(--smoky-black-1); }
@@ -589,7 +590,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .header.active {
-  padding-block: 20px;
+  padding-block: 5px;
   background-color: var(--eerie-black-4);
   border-color: var(--black-alpha-15);
 }
@@ -812,6 +813,7 @@ body.nav-active { overflow: hidden; }
   height: 110px;
   padding: 12px;
   transform: scale(0.6);
+  border-radius: 50%;
 }
 
 .hero-btn img {
@@ -1994,7 +1996,21 @@ marquee i{
   color:hsl(38, 61%, 73%);
   gap: 4vh;
 }
+/* asjkfkjda
+afkjdskjlads
+adsfkj;lkjl
+asdkjlkjl]asdfdkj
+kjasdkjlkjl
+sadfkljkjlk
+asdfdkjlkjl;dfs
+;kjlkjadfs
+jk;ljkadfs
+kj;lkjladfs
+;kjlkjldfsakjl
+akjkjd
 
+
+f */
 .content h4{
   font-size: 2vw;
   font-family: Founder;
