@@ -16,60 +16,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
    
-  body { padding: 2rem; font-family: "Roboto", sans-serif; }
+  body { padding: 2rem; font-family: "Roboto", sans-serif; 
+  background-color: black;
+  color: white;
+
+}
   
   main {
     display: grid;
     gap: 1.5rem;
     font: 0.75rem/1.6 helvetica,sans-serif;
-  
-    & h1 {
+    width: 100%;
+
+  }
+  h1{
+    height: 60px;
+    font-size: 40px;
+    background-color: rgb(54, 47, 38);
+    color: antiquewhite;
+    width: 100%;
+    text-align: center;
+    font-family:monospace;
+  }
+   #top-had {
       font-family: 'arial-black';
-      background-color: hsl(38, 61%, 73%);
+      background-color: rgb(54, 47, 38);
       text-transform: uppercase;
-      font-family: "Big Shoulders Text", sans-serif;
+      color: rgb(226, 45, 63);
+      font-family:monospace;
       font-optical-sizing: auto;
     }
-  }
   
-  nav {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 0.7rem;
-  
-    & button {
-      border: none;
-      background-color: transparent;
-      font-size: 0.75rem;
-      cursor: pointer;
-      color: rgba(0,0,0,0.7);
-    }
-  }
-
-  nav a {
-    background-color:hsl(38, 61%, 73%);
+ 
+  .for-a{
+    background-color:hsl(14, 55%, 52%);
     padding: 10px 20px;
-    border-radius: 10px;
-    &:hover{
-        background-color: hsl(38, 58%, 71%);
-    }
   }
-  
   .active {
     font-weight: 900;
     color: black;
   }
-  
-  .menu {
-    list-style-type: none;
+  .verities{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     gap: 1.5rem;
-  
-    & li {
+
+  }
+  .menu {
+    list-style-type: none;
+   
+  }
+
+ li {
       & img {
         width: 100%;
         aspect-ratio: 1;
@@ -95,7 +96,75 @@
         color: rgba(0,0,0,0.35);
       }
     }
+    button{
+      background-color: rgb(175, 137, 120);
+      height: 50px;
+      width: 170px;
+      font-size: 30px;
+      border-radius: 5px;
+    }
+    .box{
+    margin-left:180px;
+    margin-top: 30px;
   }
+  .box div{
+    border-radius: 10px;
+    
+  }
+  .bfbox{
+    margin-left: 50px;
+  }
+    #apetizerbox{
+      background-image: url(https://dypdvfcjkqkg2.cloudfront.net/large/3534369-8577.png);
+      height: 150px;
+      width: 230px;
+      background-size: contain;
+     }
+    #vegitems-box{
+      background-image: url(https://t3.ftcdn.net/jpg/05/33/16/84/360_F_533168476_ZwcHp3VXYOAr8RaAHxt2p1FwT0TbXTzj.jpg);
+      height: 160px;
+      width: 160px;
+      background-size: cover;
+    }
+    #nonvegitems-box{
+      background-image: url(https://thumbs.dreamstime.com/b/vector-non-veg-food-items-set-four-turkey-chicken-fish-crab-95203428.jpg);
+      height: 170px;
+      width: 225px;
+      background-size: cover;
+    }
+    #desserts-box{
+      background-image: url(https://t4.ftcdn.net/jpg/01/30/80/09/360_F_130800930_QH4dIu9OJYYGT1MiRhb32PIrJqp50izG.jpg);
+      height: 230px;
+      width: 220px;
+      background-size: cover;
+    }
+    #drinks-box{
+      background-image: url(https://img.freepik.com/premium-vector/splash-drink-wine-glass-logo_23758-295.jpg);
+      height: 220px;
+      width: 230px;
+      background-size: cover;
+    }
+    #frozen-box{
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3Gj9v42RQR-IkJSz-CmklW4Wxt9WD-YA4A&s);
+      height: 200px;
+      width: 260px;
+      background-size: cover;
+    }
+    #breakfast-box{
+      background-image: url(https://www.shutterstock.com/image-vector/breakfast-logo-260nw-618548885.jpg);
+      height: 200px;
+      width: 200px;
+      background-size: cover;
+    }
+    .dishes{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    h3{
+      margin-top: 2rem;
+    }
+
+    
 
 ::-webkit-scrollbar { width: 5px;}
 ::-webkit-scrollbar-track { background-color: transparent; }
@@ -107,45 +176,108 @@
  <body>
     <main id="main">
  
-        <h1><marquee behavior="smooth" direction="">Special Menu OF "The Indian Flavors" - Restaurant </marquee></h1>
-        <nav>
-            <a href="index.html"><button class="btn1"><b> IF YOU WANT GO BACK THAN CLICK !</b></button></a>
-          <button class='active' data-tag='all'>All DISHES </button>
-          <button data-tag='apetizers'>Apetizers</button>
-          <button data-tag='entries'>Entries</button>
-          <button data-tag='desserts'>Desserts</button>
-          <button data-tag='drinks'>Drinks</button>
-        </nav>
-        <ul class='menu'>
-          <li class='item' data-type='desserts'>
-            <img src='https://images.unsplash.com/photo-1588685232180-8bb64cb4837a?q=80&w=2250&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Chocolate Ice Cream</h2>
-            <p>Creamy rich cholcoate ice cream with a sprinkle of nuts and fruits</p>
-          </li>
-          <li class='item' data-type='drinks'>
-            <img src='https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Classic Pilsner <span>20/- only</span></h2>
-            <p>A pale lager with a crisp, refreshing taste that's lightly hopped</p>
-          </li>
-          <li class='item' data-type='entries'>
+        <h1 id="top-had"><marquee behavior="smooth" direction="">Special Menu OF "The Indian Flavors" - Restaurant </marquee></h1>
+        <section id="ad">
+            <h1>Our All Dishes</h1>   
+            <div class="dishes">
+          <a href="#breakfast-items" class="box bfbox">
+                <div id="breakfast-box">
+                  img
+                </div>
+              </a>
+          <a href="#apetizer-items" class="box ">
+            <div id="apetizerbox"></div>
+          </a>
+          <a href="#veg-items" class="box">
+            <div id="vegitems-box"></div>
+          </a>
+          <br>
+          <a href="#nonveg-items" class="box" >
+            <div id="nonvegitems-box"></div>
+          </a>
+          <a href="#desserts-items" class="box">
+            <div id="desserts-box"></div>
+          </a>
+          <a href="#drinks-items" class="box">
+            <div id="drinks-box"></div>
+          </a>
+          <a href="#frozen-desserts-items" class="box">
+            <div id="frozen-box"></div>
+          </a>
+          </div>
+          <H3>IF YOU WANT GO BACK THAN <a href="index.html"> Click here!</a></H3>
+        </section>        
+
+        <section id="breakfast-items">
+          <h1>Breakfast menus</h1>
+          <div class="verities">
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-glTW9VpM8O7nW1los6X5F9VkIOaj07rgw&s'>
+              <h2>Dosa</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62An25qATwuE83QS6U4uid1_fK5kigq9gMQ&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62An25qATwuE83QS6U4uid1_fK5kigq9gMQ&s'>
+              <h2>Rava Upma</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDmCAuBkNkGi0feyXH-vCaM7ZtdK36ZQrcg&ss'>
+              <h2>Idli</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF800_Yu0imgxDqVNcUXQyEe0B1RhKWYViaA&s'>
+              <h2>French toast</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBKl1TCoOCukuWnN__XnFLZMvIvFlDxev4aA&s'>
+              <h2>Rise Appe</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://thumbs.dreamstime.com/b/indian-vegetarian-glutenfree-snack-poha-indian-street-food-snack-poha-also-served-breakfast-madhya-pradesh-112711698.jpg'>
+              <h2>Poha</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfiLIOnFe4pSxSUHgTX0hcTOoDAHnBGlg1Lw&s'>
+              <h2>Aaloo Paratha</h2>
+              <p></p>
+            </li>
+         
+            <li class='item' data-type='snaks'>
+              <img src='https://www.allrecipes.com/thmb/ZYJG_anqnK83KLB-RAyIqJD83R8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/883609-f9f463d787c944b08ea10a0265c3c1ed.jpg'>
+              <h2>Honey Nut Granola</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://www.alaskafromscratch.com/wp-content/uploads/2012/05/IMG_0310_2.jpg'>
+              <h2>English Muffin</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='snaks'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZwIS1yE1jjbnzjaT_ZcdO8K_-vUDKB9cTDA&s'>
+              <h2>Khaman Dhokla</h2>
+              <p></p>
+            </li>
+            
+          </div>
+          </section>
+
+          <section id="apetizer-items">
+          <h1>Apetizers menus</h1>
+          <div class="verities">
+          <li class='item' data-type='snaks'>
             <img src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Pesto Pasta <span>20/- only</span></h2>
             <p>Freshly made Pesto pasta with sliced tomatoes</p>
           </li>
-          <li class='item' data-type='entries'>
-            <img src='https://images.unsplash.com/photo-1615865417491-9941019fbc00?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Vegetarian Delight <span>20/- only</span></h2>
-            <p>Cooked rice with quinoa salad, pinto beans, and asparagus</p>
-          </li>
-          <li class='item' data-type='apetizers'>
-            <img src='https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=2278&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>House Salad</h2>
-            <p>Fresh local vegetables pair with homemade sausages</p>
-          </li>
-          <li class='item' data-type='entries'>
-            <img src='https://images.unsplash.com/photo-1569058242252-623df46b5025?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Coconut Rice</h2>
-            <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+          <li class='item' data-type='snaks'>
+            <img src='https://littlechef.co.in/wp-content/uploads/2022/05/Chicken-Fried-Momo.jpg'>
+            <h2>Fried Paneer Momos</h2>
+            <p>Freshly made Pesto pasta with sliced tomatoes</p>
           </li>
           <li class='item' data-type='apetizers'>
             <img src='https://images.unsplash.com/photo-1600845285511-12d222278dc9?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
@@ -153,11 +285,31 @@
             <p>Homemade pumpkin soup with pumpkin seeds and blue cheese</p>
           </li>
           <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=2278&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>House Salad</h2>
+            <p>Fresh local vegetables pair with homemade sausages</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://i.pinimg.com/originals/90/00/36/90003600f3a29b67e7a58a869ada350e.jpg'>
+            <h2>Toasted ravioli</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='apetizers'>
             <img src='https://images.unsplash.com/photo-1553881781-4c55163dc5fd?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Tomato Soup</h2>
             <p>Slow cooked tomato soup with a side of classic Dutch bread</p>
           </li>
-          <li class='item' data-type='entries'>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1695712641569-05eee7b37b6d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Spring Rolls</h2>
+            <p>Indonesian style spring roll fill with carrots, celery, and shrimp</p>
+          </li>
+          <li class='item' data-type='apetizers'>
+            <img src='https://images.unsplash.com/photo-1560684352-8497838a2229?q=80&w=2256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Clam Chowder</h2>
+            <p>Classic New England cleam chowder</p>
+          </li>
+          <li class='item' data-type='apetizers'>
             <img src='https://images.unsplash.com/photo-1490990813269-10586274747f?q=80&w=2511&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Mississipi Gumbo</h2>
             <p>Southern cajun flavored gumbo with shrimps and a slice of garlic bread</p>
@@ -167,57 +319,290 @@
             <h2>Porterhouse Special</h2>
             <p>Succulent porterhouse steak with a side of mashed potato and brocoli</p>
           </li>
+          </div>
+        </section>
+          
+        <section id="nonveg-items">
+        <h1>Nonvegetarian menus</h1>
+        <div class="verities">
           <li class='item' data-type='entries'>
             <img src='https://plus.unsplash.com/premium_photo-1695055513584-e79902a77962?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Jamaican Chicken</h2>
             <p>Exotic Jamaican chicken pair with mango salad, rice and peas</p>
           </li>
           <li class='item' data-type='entries'>
-            <img src='https://images.unsplash.com/photo-1614597134736-a8e0616933d5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Classic Pork Chop</h2>
-            <p>Succluently grilled pork chop pair with garlic fries</p>
-          </li>
-          <li class='item' data-type='desserts'>
-            <img src='https://images.unsplash.com/photo-1557799852-67fdf88b1b01?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Rose Pudding</h2>
-            <p>Rose flavor tapioca pudding</p>
-          </li>
-          <li class='item' data-type='apetizers'>
-            <img src='https://images.unsplash.com/photo-1695712641569-05eee7b37b6d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Spring Rolls</h2>
-            <p>Indonesian style spring roll fill with carrots, celery, and shrimp</p>
-          </li>
-          <li class='item' data-type='desserts'>
-            <img src='https://images.unsplash.com/photo-1567327613485-fbc7bf196198?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Blueberry Cheese Cake</h2>
-            <p>Rich creamy melt in your mouth blueberry cheese cake</p>
-          </li>
-          <li class='item' data-type='drinks'>
-            <img src='https://images.unsplash.com/photo-1618799805265-4f27cb61ede9?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Lemonade</h2>
-            <p>Freshly squeeze lemonade with dash of honey</p>
-          </li>
-          <li class='item' data-type='desserts'>
-            <img src='https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=2278&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Strawberry Banana Crepe</h2>
-            <p>Classic souther strawberry banana crepe</p>
-          </li>
-          <li class='item' data-type='apetizers'>
-            <img src='https://images.unsplash.com/photo-1560684352-8497838a2229?q=80&w=2256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
-            <h2>Clam Chowder</h2>
-            <p>Classic New England cleam chowder</p>
+            <img src='https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Avocado and Egg Toast</h2>
+            <p>Tasty Avocado and egg Toast </p>
           </li>
           <li class='item' data-type='entries'>
             <img src='https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Grilled Salmon</h2>
             <p>Freshly grilled salmon with side of beets salad, caramel carrots, and garlic sauce</p>
           </li>
+          <li class='item' data-type='entries'>
+            <img src='https://images.unsplash.com/photo-1631292784640-2b24be784d5d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+            <h2>Chicken curry</h2>
+            <p>Achari Murgh. Soy based chicken alternative cooked with Indian pickling spices. Tangy, spicy and very aromatic.</p>
+          </li> 
+          <li class='item' data-type='entries'>
+            <img src='https://www.licious.in/blog/wp-content/uploads/2020/12/Perfectly-balanced-fish-curry-750x750.jpg'>
+            <h2>Fish Curry</h2>
+            <P></P>
+            <li class='item' data-type='entries'>
+              <img src='https://yourfoodfantasy.com/wp-content/webpc-passthru.php?src=https://yourfoodfantasy.com/wp-content/uploads/2022/05/Chicken-Lollipop-How-to-make.jpg&nocache=1'>
+              <h2> Chrispy Chicken Lollipop</h2>
+              <p></p>
+
+              <li class='item' data-type='entries'>
+             <img src='https://wholesomemadeeasy.com/wp-content/uploads/2022/01/Air-Fryer-Egg-Rolls-edited-41.jpg'>
+             <h2>Air Fryer Egg Rolls</h2>
+             <p></p>
+             <li class='item' data-type='entries'>
+              <img src='https://blackairreviews.com/wp-content/uploads/2024/10/chicken-butter-masala-recipe.jpg'>
+              <h2>     Butter Chiken</h2>
+              <p></p>
+            <li class='item' data-type='entries'>
+             <img src='https://th.bing.com/th/id/R.b7554f245e368f4206535304fa907408?rik=5PEBqgneeo2LMQ&riu=http%3a%2f%2fwww.ndtv.com%2fcooks%2fimages%2fMediterranean-Omelette-620.jpg&ehk=IGeB9l172DkZJLSZlMLMSJX3VVqUWltBrw0w2nmqPhI%3d&risl=&pid=ImgRaw&r=0'>
+              <h2>    Omelette</h2>
+              <p></p>
+             <li class='item' data-type='entries'>
+               <img src='https://www.licious.in/blog/wp-content/uploads/2020/12/Mutton-Masala-min.jpg'>
+              <h2> Delecious  Motton curry</h2>
+             <p></p>
+          </li>
+          </div>
+        </section>
+
+          <section id="drinks-items">
+        <h1>drinks menus</h1>
+        <div class="verities">
+            <li class='item' data-type='drinks'>
+              <img src='https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Classic Pilsner <span>20/- only</span></h2>
+              <p>A pale lager with a crisp, refreshing taste that's lightly hopped</p>
+            </li>
+            <li class='item' data-type='drinks'>
+              <img src='https://images.unsplash.com/photo-1618799805265-4f27cb61ede9?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Lemonade</h2>
+              <p>Freshly squeeze lemonade with dash of honey</p>
+            </li>
           <li class='item' data-type='drinks'>
             <img src='https://images.unsplash.com/photo-1504630083234-14187a9df0f5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
             <h2>Expresso</h2>
             <p>Classic freshly grounded Italian expresso</p>
           </li>
-        </ul>
+          <li class='item' data-type='drinks'>
+            <img src='https://cf.ltkcdn.net/cocktails/images/std/284312-800x533-the-boulevardier.jpg'>
+            <h2>Boulevardier </h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://playdatesparties.com/wp-content/uploads/2020/12/Champagne-Cocktail-Recipe-5.jpg'>
+            <h2>Champagne</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://ik.imagekit.io/vjt1kualr/drinks/hanky_panky/main-image.jpg'>
+            <h2>Hanky panky drink</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://th.bing.com/th/id/OIP.943XHxprR7HCtAqUt1KA0gHaLH?rs=1&pid=ImgDetMain'>
+            <h2>whisky</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://th.bing.com/th/id/OIP.Ls3xadUu3hqPMa0JX8T6CgHaE7?rs=1&pid=ImgDetMain'>
+            <h2>wine</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src='https://static.cookist.it/wp-content/uploads/sites/21/2018/09/white-lady-2.jpg'>
+            <h2>White lady drink</h2>
+            <p></p>
+          </li>
+          <li class='item' data-type='drinks'>
+            <img src=' https://th.bing.com/th/id/OIP.3KidMcAsKIGi5lZwNGLaTQAAAA?rs=1&pid=ImgDetMain'>
+            <h2>     Summer Vodka</h2>
+            <p></p>
+          </li>
+          </div>
+          </section>
+
+          <section id="frozen-desserts-items">
+        <h1>frozen desserts menus</h1>
+        <div class="verities">
+            <li class='item' data-type='frozen-desserts'>
+              <img src='https://images.unsplash.com/photo-1567327613485-fbc7bf196198?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Blueberry Cheese Cake</h2>
+              <p>Rich creamy melt in your mouth blueberry cheese cake</p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://images.unsplash.com/photo-1588685232180-8bb64cb4837a?q=80&w=2250&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Chocolate Ice Cream</h2>
+              <p>Creamy rich cholcoate ice cream with a sprinkle of nuts and fruits</p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://pickyeaterblog.com/wp-content/uploads/2021/05/chocolate-banana-ice-cream-Final-2.jpg'>
+              <h2>Chocolate Banana Ice Cream</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://roamilicious.com/wp-content/uploads/2020/08/easy-pumpkin-spice-popsicles.jpg'>
+              <h2>Pumpkin Popsicles</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://www.plainchicken.com/wp-content/uploads/2020/03/ice-cream-pie-1.jpg'>
+              <h2>Butter pecon ice cream pie</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://th.bing.com/th/id/OIP.mku5nQ6ohwsMlAVkdUTm_gHaLH?rs=1&pid=ImgDetMain'>
+              <h2>Mango Popsicles</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://th.bing.com/th/id/OIP.VEHZHCOAoXAQS7RPfMN--QHaLH?w=1200&h=1800&rs=1&pid=ImgDetMain'>
+              <h2>Strawberry Kulfi</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://th.bing.com/th/id/R.c0c4fd05a316f62a7ba0a6218ac6ef6d?rik=6QBIpYTmIVsyAQ&riu=http%3a%2f%2fthegreedyvegan.com%2fwp-content%2fuploads%2f2017%2f06%2f2017-June-5th-Orange-Sorbet-002.jpg&ehk=zeSprSDQEAyds5Xhcbtozu5uJKKi6%2fYwTG8F9dRSqCg%3d&risl=&pid=ImgRaw&r=0'>
+              <h2>Fresh orange Sorbet</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://decoratedtreats.com/wp-content/uploads/2023/02/black-forest-ice-cream-recipe-18.jpg'>
+              <h2>Black forest Ice Cream</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='forzen-desserts'>
+              <img src='https://tatyanaseverydayfood.com/wp-content/uploads/2022/05/Strawberry-Shortcake-Cake-Recipe-3.jpg'>
+              <h2>Strawberry Shortcake Cake</h2>
+              <p></p>
+            </li>
+            </div>
+          </section>
+
+          <section id="desserts-items">
+          <h1>dessert menus</h1>
+           <div class="verities">
+            <!-- <li class='item' data-type='desserts'>
+              <img src='https://images.unsplash.com/photo-1557799852-67fdf88b1b01?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Rose Pudding</h2>
+              <p>Rose flavor tapioca pudding</p>
+            </li> -->
+            <li class='item' data-type='desserts'>
+              <img src='https://th.bing.com/th/id/OIP.Zzl3MlSUwoMwgqo7UgfGqAHaJ4?rs=1&pid=ImgDetMain'>
+              <h2>Gulab jamun</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://cdn.loveandlemons.com/wp-content/uploads/2020/12/cookie-recipes.jpg'>
+              <h2>Cookie</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://bakingamoment.com/wp-content/uploads/2013/11/IMG_1302-best-apple-pie-recipe-square.jpg'>
+              <h2>Apple pie</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://untoldrecipesbynosheen.com/wp-content/uploads/2022/07/barfi-featured.jpg'>
+              <h2>Barfi</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://www.cookclickndevour.com/wp-content/uploads/2017/08/besan-ladoo-recipe-b.jpg'>
+              <h2>Besan ladoo</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/57635.jpg'>
+              <h2>Doughnut</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://th.bing.com/th/id/OIP.pEQfwE1qM-Czs3cTY2wxEQHaE8?w=4680&h=3120&rs=1&pid=ImgDetMain'>
+              <h2>Jalebi</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://th.bing.com/th/id/R.f777d5633b9c6ec9d6cd1633678ac0ac?rik=t6FS5H4tTN6PoA&riu=http%3a%2f%2fsallysbakingaddiction.com%2fwp-content%2fuploads%2f2013%2f05%2feasy-cinnamon-rolls-recipe-1.jpg&ehk=4KqayyW%2b4F%2bfZgs%2f%2f%2fFVseTO9dS4ObiIInZkAX8%2bW1w%3d&risl=&pid=ImgRaw&r=0'>
+              <h2>cinnamon roll</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://th.bing.com/th/id/OIP.JZfSMqi3tfZwIk9B3R_wuQHaLH?rs=1&pid=ImgDetMain'>
+              <h2>waffle</h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='desserts'>
+              <img src='https://i1.wp.com/vegecravings.com/wp-content/uploads/2017/01/Fruit-Custard-Recipe-Step-By-Step-Instructions.jpg?fit=2152%2C1748&quality=65&strip=all&ssl=1'>
+              <h2>Custard</h2>
+              <p></p>
+            </li>
+            
+            </div>
+          </section>
+
+          <section id="veg-items">
+            <h1>Vegetarian menus</h1>
+            <div class="verities">
+            <li class='item' data-type='entries'>
+              <img src='https://images.unsplash.com/photo-1615865417491-9941019fbc00?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Vegetarian Delight </h2>
+              <p>Cooked rice with quinoa salad, pinto beans, and asparagus</p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://images.unsplash.com/photo-1569058242252-623df46b5025?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+              <h2>Coconut Rice</h2>
+              <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://img-global.cpcdn.com/recipes/626cf8ed6ffd56c7/680x482cq70/%E0%A4%A2%E0%A4%AC-%E0%A4%B8%E0%A4%9F%E0%A4%87%E0%A4%B2-%E0%A4%A1%E0%A4%AC%E0%A4%B2-%E0%A4%A4%E0%A4%A1%E0%A4%95-%E0%A4%A6%E0%A4%B2-dhaba-style-double-tadka-dal-recipe-in-hindi-%E0%A4%B0%E0%A4%B8%E0%A4%AA-%E0%A4%AE%E0%A4%96%E0%A4%AF-%E0%A4%A4%E0%A4%B8%E0%A4%B5%E0%A4%B0.jpg'>
+              <h2>Daal Tadka</h2>
+              <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkte8ho3c7qf_nwHaJs-2C-yLiJT1LZjK1dg&s'>
+              <h2>Palak Paneer<h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQbC2_f_aTMGq5RO_I9h209XFsRwyRnTd7w&s'>
+              <h2>Jeera Rise<h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://dinedelicious.in/wp-content/uploads/2019/01/Dal-Makhani.jpg'>
+              <h2>Daal Makhani<h2>
+              <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://i.ytimg.com/vi/csfIOfMnRGg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB6GPMx72TdT-BQh86wkTA3VKBRpQ'>
+              <h2>Chhole Bhature<h2>
+              <p>Indonesian coconut rice pair with fried pork, boiled eggs and cucumber</p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7NlzACZD05gMUje1pI5wZdndMKtuxilA4A&s'>
+              <h2>Shahi Paneer<h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://images.news18.com/ibnkhabar/uploads/2021/07/veg-pulao.jpg'>
+              <h2>Veg Pulao<h2>
+              <p></p>
+            </li>
+            <li class='item' data-type='entries'>
+              <img src='https://www.easycookingwithmolly.com/wp-content/uploads/2020/02/shahi-matar-paneer-recipe.jpg'>
+              <h2>Matar Paneer<h2>
+              <p></p>
+            </li>
+            </div>
+          </section>
       </main>
 
       <script src="try.js"></script>
